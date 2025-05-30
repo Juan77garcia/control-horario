@@ -1,13 +1,13 @@
 FROM php:8.1-apache
 
-# Habilitar mod_rewrite (útil si usas .htaccess)
+# Instalar extensiones necesarias (mysqli)
+RUN docker-php-ext-install mysqli
+
+# Habilitar mod_rewrite por si usas .htaccess
 RUN a2enmod rewrite
 
-# Copiar tu proyecto dentro del contenedor
+# Copiar los archivos del proyecto
 COPY public/ /var/www/html/
 
-# Establecer el directorio de trabajo
-WORKDIR /var/www/html
-
-# Cambiar permisos si es necesario
+# Establecer permisos correctos
 RUN chown -R www-data:www-data /var/www/html
