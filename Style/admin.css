@@ -1,0 +1,74 @@
+ body {
+        background-color: #f5f7fa;
+        font-family: 'Segoe UI', Tahoma, sans-serif;
+    }
+
+    h2, h4 {
+        color: #2c3e50;
+        font-weight: 600;
+    }
+
+    .btn {
+        border-radius: 8px;
+        font-size: 0.9rem;
+    }
+
+    .table-responsive {
+        border-radius: 12px;
+        overflow: hidden;
+        background: #ffffff;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+    }
+
+    .table {
+        margin-bottom: 0;
+    }
+
+    .table thead {
+        background: linear-gradient(to right, #4e73df, #1cc88a);
+        color: white;
+        text-transform: uppercase;
+        font-size: 0.85rem;
+        letter-spacing: 0.03em;
+    }
+
+    .table th, .table td {
+        vertical-align: middle;
+        text-align: center;
+        padding: 12px;
+        font-size: 0.9rem;
+    }
+
+    .table-striped tbody tr:nth-of-type(odd) {
+        background-color: #f8f9fc;
+    }
+
+    .table-hover tbody tr:hover {
+        background-color: #eef2f6;
+    }
+
+    .card {
+        border: none;
+        border-radius: 12px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+    }
+
+    .form-select, .form-control {
+        border-radius: 8px;
+        font-size: 0.9rem;
+    }
+
+    .card-title {
+        font-weight: 600;
+    }
+
+    @media (max-width: 768px) {
+        .table th, .table td {
+            font-size: 0.8rem;
+            padding: 10px 6px;
+        }
+
+        .btn {
+            font-size: 0.8rem;
+        }
+    }

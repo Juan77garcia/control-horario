@@ -1,0 +1,85 @@
+/* Diseño de calendario */
+.calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+}
+
+/* Cuadro base de cada día */
+.day-box {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+    min-height: 100px;
+    background-color: white;
+    border-radius: 10px;
+    font-size: 14px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+/* Día actual */
+.day-box.hoy {
+    border: 2px solid #007bff;
+    background-color: #e6f2ff;
+}
+
+/* Día trabajado */
+.day-box.laborable {
+    background-color: #d4edda; /* verde claro */
+    border: 1px solid #c3e6cb;
+    color: #155724;
+    font-weight: bold;
+}
+
+/* Día con ausencia registrada */
+.day-box.vacaciones {
+    background-color: #fff3cd; /* amarillo claro */
+}
+
+.day-box.dia_baja {
+    background-color: #e36d6d; /* rojo claro */
+}
+
+.day-box.festivo {
+    background-color: #cfe2ff; /* azul claro */
+}
+
+/* Día que ya pasó y no fue trabajado */
+.day-box.no-trabajado {
+    background-color: #ffffff;
+    color: #721c24;
+    font-weight: bold;
+}
+
+/* Leyenda de colores */
+.legend-box {
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-size: 13px;
+    margin-right: 8px;
+    display: inline-block;
+    color: #333;
+    border: 1px solid #ccc;
+}
+
+.legend-laborable {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.legend-vacaciones {
+    background-color: #fff3cd;
+}
+
+.legend-dia_baja {
+    background-color: #f8d7da;
+}
+
+.legend-festivo {
+    background-color: #cfe2ff;
+}
+
+.legend-no-trabajado {
+    background-color: #f8d7da;
+    color: #721c24;
+}
